@@ -1,5 +1,5 @@
-<h2>Add a Logistic</h2>
-<form class="form-horizontal" action="actions/add_logistics.php" method="post">
+<h2>Add a Tournament</h2>
+<form class="form-horizontal" action="actions/add_tourney.php" method="post">
 	<div class="control-group">
 	  <label class="control-label" for="tourney_name">Tournament Name</label>
 	  <div class="controls">
