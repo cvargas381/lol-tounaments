@@ -3,7 +3,7 @@
 session_start();
 
 // "Import" functions
-//require('functions.php');
+require('functions.php');
 
 ?>
 <!DOCTYPE html>
