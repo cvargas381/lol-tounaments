@@ -1,9 +1,10 @@
 <?php
+session_start();
 // Read file into array
 $lines = file('../data/tourneys.csv',FILE_IGNORE_NEW_LINES);
 
-// Replace line with new values 
-$lines[$_POST['linenum']] = "{$_POST['tourney_name']},{$_POST['tourney_location']},{$_POST['tourney_dates']}";
+// Replace line with new values
+unset($lines[$_GET['linenum']]);
 
 // Create the string to write to the file
 $data_string = implode("\n",$lines);
@@ -16,12 +17,6 @@ fwrite($f,$data_string);
 
 // (3) close the file
 fclose($f);
-
-$_SESSION['message'] = array(
-	'text' => 'Your tourney has been edited.',
-	'type' => 'info'
-	);
 // Redirect to homepage
 header('Location:../');
-
 ?>
