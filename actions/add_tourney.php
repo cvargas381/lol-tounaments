@@ -12,6 +12,12 @@ if($_POST['tourney_name'] != '' && $_POST['tourney_location'] != '' && $_POST['t
 
 	// (3) close the file
 	fclose($f);
+
+	$_SESSION['message'] = array(
+		'text' => 'Your tournament has been added.',
+		'type' => 'success'
+		);
+
 	// Redirect to homepage
 	header('Location:../');
 } else {
@@ -19,7 +25,10 @@ if($_POST['tourney_name'] != '' && $_POST['tourney_location'] != '' && $_POST['t
 	$_SESSION['POST'] = $_POST;
 
 	// Store message 	
-	$_SESSION['message'] = '<div class="alert alert-error">Please enter all required information</div>';
+	$_SESSION['message'] = array(
+		'text' => 'Please prove all required information.',
+		'type' => 'error'
+		);
 
 	// Redirect to the form
 	header('Location:../?p=form_add_tourney');

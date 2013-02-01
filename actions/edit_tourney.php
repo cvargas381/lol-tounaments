@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Read file into array
 $lines = file('../data/tourneys.csv',FILE_IGNORE_NEW_LINES);
 
@@ -18,9 +19,10 @@ fwrite($f,$data_string);
 fclose($f);
 
 $_SESSION['message'] = array(
-	'text' => 'Your tourney has been edited.',
+	'text' => 'Your tournament has been edited.',
 	'type' => 'info'
 	);
+
 // Redirect to homepage
 header('Location:../');
 

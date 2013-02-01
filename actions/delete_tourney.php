@@ -17,6 +17,12 @@ fwrite($f,$data_string);
 
 // (3) close the file
 fclose($f);
+
+$_SESSION['message'] = array(
+	'text' => 'Your tournament has been deleted.',
+	'type' => 'error'
+	);
+
 // Redirect to homepage
 header('Location:../');
 ?>
