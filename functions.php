@@ -25,7 +25,7 @@ function input($name, $placeholder, $value=null) {
 		$value = '';
 		$class = '';
 	}
-	return "<input $class type=\"text\" name=\"$name\" placeholder=\"$placeholder\" value=\"$value\" />";
+	return "<input $class type=\"text\" id=\"$name\" name=\"$name\" placeholder=\"$placeholder\" value=\"$value\" />";
 }
 
 /**
@@ -70,3 +70,4 @@ function radio($name, $options) {
 	}
 	return $cards;
 }
+?>

@@ -9,6 +9,10 @@ require('functions.php');
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+		<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+		<link rel="stylesheet" href="/resources/demos/style.css" />
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="styles.css" />
 		<title>LoL Tournament Logistics</title>
