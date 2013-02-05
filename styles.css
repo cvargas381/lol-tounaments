@@ -1,0 +1,32 @@
+body div#wrapper {
+	background-color:white;
+	padding:0px 20px;
+	padding-top:10px;
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+	border-radius:10px;
+}
+
+body {
+	background-image:url('images/metal-bg-scaled.jpg');
+}
+
+div.navbar-inner {
+	border-radius:0px;
+}
+
+div.navbar {
+	margin-bottom:40px	;
+}
+
+div#wrapper h2 {
+	text-align:center;
+}
+
+td.button {
+	width:110px;
+}
+
+footer p {
+	text-align:center;
+}

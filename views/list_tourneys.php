@@ -31,7 +31,7 @@ foreach($lines as $line) {
 	echo 	"<td>$end_date</td>";
 	// code for deleting confirmation
 	$onclick = "return confirm('Are you sure you want to delete $name?')";
-	echo 	"<td><a href=\"./?p=form_edit_tourney&tourney=$i\" class=\"btn btn-warning\"><i class=\"icon-edit icon-white\"></i></a> <a onclick=\"$onclick\" href=\"./actions/delete_tourney.php?linenum=$i\" class=\"btn btn-danger\"><i class=\"icon-trash icon-white\"></i></a></td>";
+	echo 	"<td class=\"button\"><a href=\"./?p=form_edit_tourney&tourney=$i\" class=\"btn btn-warning\"><i class=\"icon-edit icon-white\"></i></a> <a onclick=\"$onclick\" href=\"./actions/delete_tourney.php?linenum=$i\" class=\"btn btn-danger\"><i class=\"icon-trash icon-white\"></i></a></td>";
 	echo '</tr>';
 
 	$i++; // increment line number

@@ -4,7 +4,7 @@ session_start();
 $lines = file('../data/tourneys.csv',FILE_IGNORE_NEW_LINES);
 
 // Replace line with new values 
-$lines[$_POST['linenum']] = "{$_POST['tourney_name']},{$_POST['tourney_location']},{$_POST['tourney_dates']}";
+$lines[$_POST['linenum']] = "{$_POST['tourney_name']},{$_POST['tourney_location']},{$_POST['from']},{$_POST['to']}";
 
 // Create the string to write to the file
 $data_string = implode("\n",$lines);

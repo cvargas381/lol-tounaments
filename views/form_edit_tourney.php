@@ -1,3 +1,24 @@
+<!--functin for date widget-->
+<script>
+  $(function() {
+    $( "#from" ).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 1,
+      onClose: function( selectedDate ) {
+        $( "#to" ).datepicker( "option", "minDate", selectedDate );
+      }
+    });
+    $( "#to" ).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 1,
+      onClose: function( selectedDate ) {
+        $( "#from" ).datepicker( "option", "maxDate", selectedDate );
+      }
+    });
+  });
+  </script>
 <?php
 // Read all lines of the CSV file into an array
 $lines = file('data/tourneys.csv',FILE_IGNORE_NEW_LINES);
@@ -24,7 +45,10 @@ $tourney = explode(',',$lines[$_GET['tourney']]);
 	<div class="control-group">
 	  <label class="control-label" for="tourney_dates">Tournament Dates</label>
 	  <div class="controls">
-	    <?php echo input('tourney_dates','required', $tourney[2]) ?>
+	  	<label for="from">From</label>
+		<?php echo input('from','required', $tourney[2]) ?>
+		<label for="to">to</label>
+		<?php echo input('to','required', $tourney[3]) ?>
 	  </div>
 	</div>
 	<div class="form-actions">
