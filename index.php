@@ -18,9 +18,11 @@ require('functions.php');
 		<title>LoL Tournaments</title>
 	</head>
 	<body>
-		<nav>
-			<?php include('layout/nav.php') ?>
-		</nav>
+		<div id="navigation">
+			<nav>
+				<?php include('layout/nav.php') ?>
+			</nav>
+		</div>
 		<div id="wrapper" class="container">
 			<header>
 				<?php include('layout/header.php') ?>
